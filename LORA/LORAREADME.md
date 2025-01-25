@@ -31,15 +31,34 @@ DeepNN(
 ```
 
 ## 📊 Results  
-### Classification Report (Test Set)  
+### Classification Report Comparison (Test Set)
+
+#### Before LoRA Fine-Tuning
+| Class          | Precision | Recall | F1-Score |  
+|----------------|-----------|--------|----------|  
+| **Dress**      | 0.85      | 0.83   | 0.84     |  
+| Overall Accuracy | 0.82     | 
+
+#### After LoRA Fine-Tuning
 | Class          | Precision | Recall | F1-Score |  
 |----------------|-----------|--------|----------|  
 | **Dress**      | 0.81      | 0.92   | 0.86     |  
-| T-shirt/top    | 0.75      | 0.87   | 0.81     |  
-| Trouser        | 0.98      | 0.96   | 0.97     |  
+| Overall Accuracy | 0.848    | 
 
-**Overall Accuracy**: 0.848  
-**Trainable Parameters**: 30K/934K  
+#### Key Improvements for Dress Class
+| Metric        | Before | After | Δ    |
+|---------------|--------|-------|------|
+| **Recall**    | 0.83   | 0.92  | ↑+9% |
+| **F1-Score**  | 0.84   | 0.86  | ↑+2% |
+
+Full class comparison:
+| Class          | Precision (Before → After) | Recall (Before → After) | F1-Score (Before → After) |
+|----------------|----------------------------|-------------------------|---------------------------|
+| T-shirt/top    | 0.78 → 0.75                | 0.79 → 0.87             | 0.79 → 0.81               |
+| Trouser        | 0.95 → 0.98                | 0.97 → 0.96             | 0.96 → 0.97               |
+| **Dress**      | 0.85 → 0.81                | 0.83 → 0.92             | 0.84 → 0.86               | 
+| Sandal         | 0.94 → 0.96                | 0.89 → 0.91             | 0.91 → 0.93               |
+| Ankle boot     | 0.76 → 0.94                | 0.99 → 0.92             | 0.86 → 0.93               |
 
 ## 💡 Possible Improvements  
 1. **LoRA Rank Experimentation**: Test ranks like `4`, `8`, or `16`.  
