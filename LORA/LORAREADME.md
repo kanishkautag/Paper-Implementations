@@ -28,7 +28,8 @@ DeepNN(
   (linear3): LoRALayer(Original=Linear(1000->10))
 )
 
-📊 Results
+
+## 📊 Results
 Classification Report (Test Set)
 Class	Precision	Recall	F1-Score
 Dress	0.81	0.92	0.86
