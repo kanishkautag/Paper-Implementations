@@ -29,26 +29,3 @@ DeepNN(
 )
 
 
-## 📊 Results
-Classification Report (Test Set)
-Class	Precision	Recall	F1-Score
-Dress	0.81	0.92	0.86
-T-shirt/top	0.75	0.87	0.81
-Trouser	0.98	0.96	0.97
-Overall Accuracy	0.848	Params Trained	30K/934K
-
-💡 Possible Improvements
-Experiment with different LoRA ranks (4, 8, 16)
-
-Adjust class weights in loss function
-
-Apply LoRA to specific layers only
-
-Add alpha scaling (α/r) for LoRA updates
-
-@article{lora2021,
-  title={LoRA: Low-Rank Adaptation of Large Language Models},
-  author={Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Chen, Weizhu},
-  journal={ICLR},
-  year={2021}
-}
